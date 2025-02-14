@@ -38,4 +38,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     drawHeart();
+
+    // Exibir o vídeo ao clicar no botão
+    const button = document.getElementById("showVideo");
+    const videoContainer = document.getElementById("videoContainer");
+    const closeModal = document.querySelector(".close");
+    const video = document.getElementById("loveVideo");
+
+    button.addEventListener("click", function () {
+        videoContainer.style.display = "flex"; // Exibe o modal
+        video.play(); // Inicia a reprodução automaticamente
+    });
+
+    // Fechar modal ao clicar no 'X'
+    closeModal.addEventListener("click", function () {
+        videoContainer.style.display = "none";
+        video.pause(); // Pausa o vídeo ao fechar o modal
+        video.currentTime = 0; // Reseta o tempo do vídeo
+    });
+
+    // Fechar modal ao clicar fora da área do vídeo
+    window.addEventListener("click", function (event) {
+        if (event.target === videoContainer) {
+            videoContainer.style.display = "none";
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
 });
