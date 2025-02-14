@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeModal = document.querySelector(".close");
     const video = document.getElementById("loveVideo");
 
+    // Garante que o modal esteja oculto ao carregar a página
+    videoContainer.style.display = "none";
+
     button.addEventListener("click", function () {
         videoContainer.style.display = "flex"; // Exibe o modal
         video.play(); // Inicia a reprodução automaticamente
