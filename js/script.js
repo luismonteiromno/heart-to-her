@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("heartCanvas");
-    const ctx = canvas.getContext("2d");
+    const context = canvas.getContext("2d");
 
     canvas.width = 400;
     canvas.height = 400;
 
     function drawHeart() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        context.clearRect(0, 0, canvas.width, canvas.height);
         
         let t, x, y;
-        ctx.beginPath();
-        ctx.fillStyle = "red";
-        ctx.strokeStyle = "black";
-        ctx.lineWidth = 2;
+        context.beginPath();
+        context.text = "Heart";
+        context.fillStyle = "red";
+        context.strokeStyle = "black";
+        context.lineWidth = 2;
 
         for (let i = 0; i <= 100; i++) {
             t = (i / 100) * (2 * Math.PI);
@@ -22,13 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
             x = canvas.width / 2 + x * 10;
             y = canvas.height / 2 - y * 10;
 
-            if (i === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
+            if (i === 0) context.moveTo(x, y);
+            else context.lineTo(x, y);
         }
 
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath();
+        context.fill();
+        context.stroke();
+        context.closePath();
     }
 
     drawHeart();
