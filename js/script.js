@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         
         let t, x, y;
         context.beginPath();
-        context.text = "Heart";
         context.fillStyle = "red";
         context.strokeStyle = "black";
         context.lineWidth = 2;
@@ -30,6 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
         context.fill();
         context.stroke();
         context.closePath();
+        
+        context.fillStyle = "white";
+        context.font = "35px Times New Roman";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillText('Coração', canvas.width / 2, canvas.height / 2);
     }
 
     drawHeart();
