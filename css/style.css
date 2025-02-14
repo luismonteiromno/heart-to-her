@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff5f5;
+    font-family: 'Times New Roman'
+}
+
+h1 {
+    color: #d63333;
+    text-align: center;
+}
+
+canvas {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.autarquias {
+    display: table-cell;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #f92dd7;
+    border-radius: 5px;
+}
