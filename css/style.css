@@ -3,33 +3,50 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #fff5f5;
-    font-family: 'Times New Roman'
+    font-family: 'Times New Roman', serif;
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
     color: #d63333;
-    text-align: center;
+    font-size: 1.8rem;
+    margin: 10px 0;
 }
 
 canvas {
+    width: 90%;
     max-width: 400px;
-    max-height: 400px;
-}
-
-img {
-    max-width: 200px;
-    max-height: 200px;
+    height: auto;
 }
 
 .autarquias {
-    display: table-cell;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px;
+    gap: 15px;
+    padding: 15px;
     border: 1px solid #f92dd7;
     border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+}
+
+.autarquias img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .autarquias img {
+        max-width: 150px;
+    }
 }
